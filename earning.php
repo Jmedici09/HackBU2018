@@ -21,13 +21,13 @@
 	<h3> You can input your earnings on this page </h3>
 
 	<div class="earning">
-		<form id="earnform" action="action_page.php">
+		<form id="earnform" action="insert_transaction.php" method="post">
 
 		<label for="">Date</label>
-		<input type="text" id="datein" name="datein" placeholder="Enter Date (mm/dd/yyyy)">
+		<input type="text" id="date" name="date" placeholder="Enter Date (mm/dd/yyyy)">
 
-		<label for="amountin">Amount</label>
-		<input type="text" id="amountin" name="amountin" placeholder="Enter the Amount">
+		<label for="amount">Amount</label>
+		<input type="text" id="amount" name="amount" placeholder="Enter the Amount">
 
 		<label for="account">Account</label>
 		<select id="account" name="account">
@@ -37,8 +37,8 @@
 			<option value="d">D</option>
 		</select>
 
-		<label for="descriptionin">Description</label>
-		<textarea id="descriptionin" name="descriptionin" placeholder="Describe your earning.." style="height:100px"></textarea>
+		<label for="description">Description</label>
+		<textarea id="description" name="description" placeholder="Describe your earning.." style="height:100px"></textarea>
 
 		<input type="submit" value="Submit">	
 		</form>

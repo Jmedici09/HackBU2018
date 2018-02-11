@@ -21,7 +21,7 @@
 			<h3> You can input your spendings on this page </h3>
 
 			<div class="spending">
-				<form action="action_page.php">
+				<form action="insert_transaction.php" method="post">
 
 				<label for="">Date</label>
 				<input type="text" id="dateout" name="dateout" placeholder="Enter Date (mm/dd/yyyy)">
