@@ -16,30 +16,45 @@ $response = @mysqli_query($dbc, $query);
 
 if($response){
 	
-	echo '<table align ="left"
-	cellspacing="8" cellpadding="15">
-	
-	<tr><rd align="left"><b>Transaction ID</b></td>
-	<tr><rd align="left"><b>Date</b></td>
-	<tr><rd align="left"><b>Description</b></td>
-	<tr><rd align="left"><b>Amount</b></td>
-	<tr><rd align="left"><b>Account</b></td>
-	<tr><rd align="left"><b>Category</b></td></tr>';
+	echo '<table>	
+	<tr>
+		<th><h3><b>Transaction ID</b></h3></th>
+		<th><h3><b>Date</b></h3></th>
+		<th><h3><b>Description</b></h3></th>
+		<th><h3><b>Amount</b></h3></th>
+		<th><h3><b>Account</b></h3></th>
+		<th><h3><b>Category</b></h3></th>
+	</tr>';
 	
 	while($row = mysqli_fetch_array($response)){
 		
-		echo '<tr><td align="left">' .
-		$row['ID'] . '</td><td align="left">' .
-		$row['date'] . '</td><td align="left">' .
-		$row['description'] . '</td><td align="left">' .
-		$row['amount'] . '</td><td align="left">' .
-		$row['account'] . '</td><td align="left">' .
-		$row['category'] . '</td><td align="left">' ;
+		echo '<tr><td>' .
+		$row['ID'] . '</td><td>' .
+		$row['date'] . '</td><td>' .
+		$row['description'] . '</td><td>' .
+		$row['amount'] . '</td><td>' .
+		$row['account'] . '</td><td>' .
+		$row['category'] . '</td></tr>' ;
 		
-		echo '</tr>';
 	}
 	
 	echo '</table>';
+	
+	echo '<style> 
+		table {
+			width:100%
+			border-collapse: collapse;
+			border-spacing: 0px
+		}
+		td,th {
+			text-align: center;
+			border: 1px solid black;
+			padding: 2px;
+		}
+		tr:nth-child(even){
+			background-color:#dddddd;
+		}
+		</style>';
 } else{
 	
 	echo "Couldn't issue database query";
