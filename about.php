@@ -15,8 +15,9 @@
 			<h3> Purpose </h3>
 			<p> A way to start budgeting your life.
 			Includes a way to input your earnings into various accounts
-			and splits your spendings into several categories. </p>
+			and splits your spendings into several categories. TROLOLOLOL
 
+			</p>
 		</div>
 
 
