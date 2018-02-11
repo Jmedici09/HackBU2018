@@ -5,14 +5,7 @@
 		</head>
 		<body>
 
-		<div>
-			<ul>
-				<li><a href="earning.php"/>Earning</a></li>
-				<li><a href="spending.php">Spending</a></li>
-				<li><a href="statement.php">Statement</a></li>
-				<li style="float:right"><a href="about.php">About</a></li>
-			</ul>
-		</div>
+		<?php include('header.php'); ?>
 
 
 		<div style="margin-top:5%; padding: 1px 16px; height: 1000px;">
@@ -22,7 +15,7 @@
 			<h3> Purpose </h3>
 			<p> A way to start budgeting your life.
 			Includes a way to input your earnings into various accounts
-			and splits your spendings into several categories.
+			and splits your spendings into several categories. </p>
 
 		</div>
 

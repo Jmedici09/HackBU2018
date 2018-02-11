@@ -7,6 +7,7 @@
 
 		<div>
 			<ul>
+				<li><a href="home.php"/>Home</a></li>
 				<li><a href="earning.php"/>Earning</a></li>
 				<li><a href="spending.php">Spending</a></li>
 				<li><a href="statement.php">Statement</a></li>

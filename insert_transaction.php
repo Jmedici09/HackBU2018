@@ -12,24 +12,12 @@ OR die('Could not connect to MySQL ' .
 $datet = $_POST['datet'];
 $description = $_POST['description'];
 $amount = $_POST['amount'];
-
-if(empty($_POST['account'])) {
-	$account = "NULL";
-} else {
-	$account = $_POST['account'];
-	$account = "\"$account\"";
-}
-
-if(empty($_POST['category'])) {
-	$category = "NULL";
-} else {
-	$category = $_POST['category'];
-	$category = "\"$category\"";
-}
+$account = $_POST['account'];
+$category = $_POST['category'];
 
 
 $sql = "INSERT INTO budget (date, description, amount, account, category)
-VALUES (\"$datet\", \" $description \", $amount, \"$account\", \"$category\")";
+VALUES (\"$datet\", \"$description\", $amount, \"$account\", \"$category\")";
 
 
 if($dbc->query($sql) === TRUE) {
@@ -39,5 +27,13 @@ if($dbc->query($sql) === TRUE) {
 } 
 $dbc->close();
 
-
 ?>
+
+
+<button type="button" onclick="goHome()">Go Back</button>
+
+<script>
+function goHome(){
+	document.location.href = "statement.php";
+}
+</script>
