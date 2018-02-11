@@ -1,10 +1,19 @@
 <?php
 
-require_once('../mysqli_connect.php');
+#require_once('../mysql_connect.php');
 
-$query = "SELECT ID, date, description, amount, account, category, FROM USER";
+DEFINE ('DB_USER','root');
+DEFINE ('DB_PASSWORD', '');
+DEFINE ('DB_HOST', 'localhost');
+DEFINE ('DB_NAME','budgetime');
 
-#response = @mysqli_query($dbc,, $query);
+$dbc = @mysqli_connect(DB_HOST, DB_USER, DB_PASSWORD,DB_NAME)
+OR die('Could not connect to MySQL ' .
+		mysqli_connect_error());
+
+$query = "SELECT ID, date, description, amount, account, category FROM BUDGET";
+
+$response = @mysqli_query($dbc, $query);
 
 if($response){
 	
@@ -26,8 +35,8 @@ if($response){
 		$row['description'] . '</td><td align="left">' .
 		$row['amount'] . '</td><td align="left">' .
 		$row['account'] . '</td><td align="left">' .
-		$row['category'] . '</td><td align="left">' .;
-	
+		$row['category'] . '</td><td align="left">' ;
+		
 		echo '</tr>';
 	}
 	
