@@ -1,7 +1,5 @@
 <?php
 
-#require_once('../mysql_connect.php');
-
 DEFINE ('DB_USER','root');
 DEFINE ('DB_PASSWORD', '');
 DEFINE ('DB_HOST', 'localhost');
@@ -11,6 +9,7 @@ $dbc = @mysqli_connect(DB_HOST, DB_USER, DB_PASSWORD,DB_NAME)
 OR die('Could not connect to MySQL ' .
 		mysqli_connect_error());
 
+
 $query = "SELECT ID, date, description, amount, account, category FROM BUDGET";
 
 $response = @mysqli_query($dbc, $query);
@@ -18,7 +17,7 @@ $response = @mysqli_query($dbc, $query);
 if($response){
 	
 	echo '<table align ="left"
-	cellspacing="5" cellpaddding="8">
+	cellspacing="8" cellpadding="15">
 	
 	<tr><rd align="left"><b>Transaction ID</b></td>
 	<tr><rd align="left"><b>Date</b></td>
