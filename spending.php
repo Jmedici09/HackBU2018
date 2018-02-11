@@ -23,22 +23,22 @@
 			<div class="spending">
 				<form action="insert_transaction.php" method="post">
 
-				<label for="">Date</label>
-				<input type="text" id="dateout" name="dateout" placeholder="Enter Date (mm/dd/yyyy)">
+		<label for="">Date</label>
+		<input type="date" id="datet" name="datet">
 
-				<label for="amountout">Amount</label>
-				<input type="text" id="amountout" name="amountout" placeholder="Enter the Amount">
+		<label for="amount">Amount</label>
+		<input type="number" step=".01" id="amount" name="amount" placeholder="Enter the Amount">
 
 				<label for="catgory">Category</label>
 				<select id="category" name="category">
 					<option value="grocery">Grocery</option>
 					<option value="bills">Bills</option>
 					<option value="entertainment">Entertainment</option>
-					<option value="eatingout">Eating Out</option>
+					<option value="eating out">Eating Out</option>
 				</select>
 
-				<label for="descriptionout">Description</label>
-				<textarea id="descriptionout" name="descriptionout" placeholder="Describe your spending.." style="height:100px"></textarea>
+				<label for="description">Description</label>
+				<textarea id="description" name="description" placeholder="Describe your spending.." style="height:100px"></textarea>
 
 				<input type="submit" value="Submit">
 			

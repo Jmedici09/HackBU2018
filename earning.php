@@ -24,17 +24,17 @@
 		<form id="earnform" action="insert_transaction.php" method="post">
 
 		<label for="">Date</label>
-		<input type="text" id="date" name="date" placeholder="Enter Date (mm/dd/yyyy)">
+		<input type="date" id="datet" name="datet">
 
 		<label for="amount">Amount</label>
-		<input type="text" id="amount" name="amount" placeholder="Enter the Amount">
+		<input type="number" step=".01" id="amount" name="amount" placeholder="Enter the Amount">
 
 		<label for="account">Account</label>
 		<select id="account" name="account">
-			<option value="a">A</option>
-			<option value="b">B</option>
-			<option value="c">C</option>
-			<option value="d">D</option>
+			<option value="Chase">Chase</option>
+			<option value="Bank of America">Bank of America</option>
+			<option value="TD">TD</option>
+			<option value="Citi Bank"> Citi Bank</option>
 		</select>
 
 		<label for="description">Description</label>
